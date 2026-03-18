@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secagem Inteligente</title>
+
+<link rel="manifest" href="manifest.json">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: linear-gradient(135deg,#74ebd5,#acb6e5);
+}
+.container {
+  background: white;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 15px;
+}
+button, select {
+  padding: 10px;
+  margin: 5px;
+}
+.hour {
+  display:inline-block;
+  margin:5px;
+  padding:8px;
+  border-radius:10px;
+}
+.good{background:#a8e6a3;}
+.ok{background:#fff3a3;}
+.bad{background:#ffb3b3;}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h2>🧺 Secagem Inteligente</h2>
+
+<select id="clothes">
+  <option value="1">T-shirts</option>
+  <option value="1.5">Calças</option>
+  <option value="2">Toalhas</option>
+</select>
+
+<br>
+<button onclick="getLocation()">📍 Localização</button>
+
+<h3 id="best"></h3>
+<h4 id="timeEstimate"></h4>
+
+<canvas id="chart"></canvas>
+<div id="hours"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
